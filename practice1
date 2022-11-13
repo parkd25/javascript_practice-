@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+let first_name = prompt("What's your first name?");
+if (first_name == "Derrick") {
+    alert("Hello Derrick, great to see you!");
+} else {
+    alert("Who the heck is " + first_name + "?");
+}
+
+</script>
+
+</body>
+</html>
