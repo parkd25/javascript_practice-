@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<html lang="en" dir"ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <div id="date_today">
+            <p>You loaded this page on <span id="date1"></span> at <span id="time1"></span></p>
+        </div>
+        <div id=""time_diff">
+            <p>time 1: <span id="t1"></span></p>
+            <p>time 2: <span id="t2"></span></p>
+            <p>time difference is: <span id="diff"></span></p>
+        </div> 
+        <div>
+            <p>Ha cargado esta página en <span id="date2"></span> a las <span id="time2"></span></p>
+        </div>
+    </body>
+
+    <script type="text/javascript">
+        document.getElementById("date1").innerHTML = "01/01/1870"
+        let dateObj2 = new Date(); 
+        document.getElementById("time1").innerHTML = dateObj2;
+        
+        let obj1 = new Date();
+        alert("obj1: "+obj1);
+        let obj2 = new Date();
+        alert("obj2: "+obj2);
+        let sec1 = obj1.getSeconds();
+        let sec2 = obj2.getSeconds();
+        alert("seconds in obj1: "+sec1+" and in obj2: "+sec2);
+        let diff = sec2 - sec1;
+        alert("difference is "+diff);
+        document.getElementById("t1").innerHTML = obj1;
+        document.getElementById("t2").innerHTML = obj2;
+        document.getElementById("diff").innerHTML = diff;
+        
+        let dateObj = new Date(); 
+
+        let the_date = dateObj.getDate(); 
+        let the_month = dateObj.getMonth() + 1; 
+        let the_year  = dateObj.getFullYear(); 
+        let current_date = the_month + "/" + the_date + "/" + the_year; 
+        let the_hour = dateObj.getHours();
+        let the_minute = dateObj.getMinutes();
+        let the_second = dateObj.getSeconds();
+        let current_time = the_hour + ":" + the_minute + ":" + the_second;
+
+        document.getElementById("date2").innerHTML = current_date; 
+        document.getElementById("time2").innerHTML = current_time; 
+
+    </script>
+</html>
